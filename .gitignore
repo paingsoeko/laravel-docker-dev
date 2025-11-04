@@ -1,0 +1,9 @@
+test/
+.env
+tenant_nginx/
+dbdata/
+data/
+.idea/
+.DS_Store
+src/
+
