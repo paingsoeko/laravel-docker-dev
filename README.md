@@ -78,9 +78,19 @@ make artisan cmd="make:controller UserController"
 make composer cmd="require laravel/sanctum"
 ```
 
-## Directory Structure
+## Directory Structure & Configuration
 
 - `src/`: Your Laravel application code.
 - `nginx/`: Nginx configuration.
 - `php/`: PHP Dockerfile and configuration.
 - `docker-compose.yml`: Docker services definition.
+
+> **Note:**
+> You should place your Laravel application code in the `src` folder (or a subdirectory within it).
+> The location of your application code is configured in the `.env` file using the `HOST_PATH` variable.
+>
+> Example `.env` configuration:
+> ```ini
+> HOST_PATH=src/your_project_name
+> ```
+> This path will be mounted to `/var/www/html` inside the container.
